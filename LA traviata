@@ -1,0 +1,23 @@
+PDO Databas
+2 tabeller för det här
+
+tabell 1 = story
+-id int unsigned primary Ai
+-text text
+
+tabell 2 = storylines
+-id int unsigned primary Ai
+-storyid id unsigned index
+-text varchar 128
+
+
+SQl Functioner
+
+//Funtion för join
+SELECT * FROM story JOIN storylinks ON storylinks.storyid = story.id WHERE story.id =1
+
+
+SELECT * FROM story WHERE id =
+
+
+SELECT * FROM storylinks WHERE storyid = page
