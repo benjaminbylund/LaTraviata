@@ -27,7 +27,11 @@
   <input type="text" name="bild" value="">
   <br>Tryck på sumbit för att skapa din fråga<br>
   <input type="submit" name="submit" value="Submit">
+	<input type="submit" name="update" value="Update">
 </form>
+
+
+
 
 <?php
 // TODO
@@ -48,6 +52,14 @@ if (isset($_POST['submit'])){
 	$stmt->execute();
 
 var_dump($_POST);
+
+}elseif($_POST['update']) {
+	$filteredText = filter_input(INPUT_POST, "text", FILTER_SANITIZE_EMAIL);
+	$filteredPic = filter_input(INPUT_POST, "bild", FILTER_SANITIZE_SPECIAL_CHARS);
+	$stmt = $dbh->prepare("UPDATE story SET text= :text, bild= :bild WHERE 1");
+	$stmt->bindparam(':text', $filteredText);
+	$stmt->bindparam(':bild', $filteredPic);
+	$stmt->execute();
 
 }
 
