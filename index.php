@@ -13,13 +13,16 @@
 <body>
 <nav id="navbar">
 	<a class="active" href="index.php">Hem</a>
-	<a href="play.php">Spela</a>
+	<a href="play.php?page=1">Spela</a>
 	<a href="edit.php">Redigera</a>
 </nav>
 <main class="content">
 	<section>
 		<h1>Soloäventyr - La Traviata</h1>
-		<p>Välkommen till sidan om...</p>
+		<p>Välkommen till mitt text äventyr om La Traviata.</p>
+		<p> Om du väljer att trycka på Spela så kommer du kunna spela mitt fantastiska
+			 spel.</p>
+
 <?php
 
 

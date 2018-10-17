@@ -13,7 +13,7 @@
     text-align: center;
     padding: 14px;
     text-decoration: none;
-    font-size: 1.2em;    
+    font-size: 1.2em;
 }
 
 #navbar a:hover {
@@ -54,20 +54,30 @@ html {
 }
 
 body {
-    font-size: 1.2em;
+    font-size: 2.2em;
     font-family: 'Merriweather', serif;
     margin: 0px;
-    padding: 0px;    
+    padding: 0px;
+    background-color: orange;
 }
+
+body:hover{
+  cursor: crosshair;
+}
+
+a {
+  color: white;
+ text-decoration: none;
+ text-transform: uppercase;
+}
+
+a:hover{
+  cursor: pointer;
+  color: black;
+  text-decoration: underline;
+}
+
 
 h1, h2, h3, h4 {
     font-family: 'Merriweather Sans', sans-serif;
-}
-
-.gotopagelinks {
-    text-align: center;
-}
-
-.gotopagelinks a {
-    padding: 12px;
 }

@@ -13,21 +13,13 @@
 <body>
 <nav id="navbar">
 	<a href="index.php">Hem</a>
-	<a class="active" href="play.php">Spela</a>
+	<a class="active" href="play.php?page=1">Spela</a>
 	<a href="edit.php">Redigera</a>
 </nav>
 <main class="content">
 	<section>
 		<h1>Spela</h1>
-<!--
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit hic aliquid nostrum quibusdam veritatis? Eaque accusantium odit id deserunt, quae minima adipisci nesciunt illum ipsa ea placeat, earum laboriosam corrupti.</p>
-		<footer class="gotopagelinks">
-			<p>
-				<a href="play.php?page=1">Nästa sida</a>
-				<a href="play.php?page=2">Gå till sidan</a>
-			</p>
-		</footer>
--->
+
 <?php
 	include_once 'include/dbinfo.php';
 	// PDO
@@ -50,7 +42,7 @@
 		$stmt->execute();
 		$row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		foreach ($row as $val) {
-			echo "<br>"; 
+			echo "<br>";
 			echo "<a href=\"?page=" . $val['target'] . "\">" . $val['text'] . "</a>";
 		}
 	} elseif(isset($_SESSION['page'])) {
