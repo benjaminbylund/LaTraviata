@@ -30,17 +30,12 @@
 	<input type="submit" name="update" value="Update">
 </form>
 
-
-
-
 <?php
 // TODO
 
 include_once 'include/dbinfo.php';
 // PDO
 $dbh = new PDO('mysql:host=localhost;dbname=test;charset=utf8mb4', $dbuser, $dbpass);
-
-
 
 
 if (isset($_POST['submit'])){
@@ -53,10 +48,10 @@ if (isset($_POST['submit'])){
 
 var_dump($_POST);
 
-}elseif($_POST['update']) {
+}elseif(isset($_POST['update'])) {
 	$filteredText = filter_input(INPUT_POST, "text", FILTER_SANITIZE_EMAIL);
 	$filteredPic = filter_input(INPUT_POST, "bild", FILTER_SANITIZE_SPECIAL_CHARS);
-	$stmt = $dbh->prepare("UPDATE story SET text= :text, bild= :bild WHERE 1");
+	$stmt = $dbh->prepare("UPDATE story SET text= :text, bild= :bild WHERE 0");
 	$stmt->bindparam(':text', $filteredText);
 	$stmt->bindparam(':bild', $filteredPic);
 	$stmt->execute();
@@ -64,8 +59,22 @@ var_dump($_POST);
 }
 
 
+$stmt = $dbh->prepare("SELECT * FROM story");
+$stmt->execute();
 
+$row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+echo "<table>";
+
+foreach ($row as $value){
+	echo "<tr>";
+			echo 	"<td>" . $value['id'] . "</td>";
+			echo "<td>" . substr($value['text'], 0, 40) . " </td>";
+	echo "<td <a href=\"edit.php?edit=" . $value['id'] . "\">Edit</a> </td>";
+	echo "</tr>";
+}
+
+echo "</table>";
 
 ?>
 </main>

@@ -18,8 +18,9 @@
 </nav>
 <main class="content">
 	<section>
-		<h1>Soloäventyr - La Traviata</h1>
-		<p>Välkommen till mitt text äventyr om La Traviata.</p>
+		<h1>Soloäventyr - Ensamma Fåret</h1>
+		<p>Välkommen till mitt text äventyr Ensamma Fåret, Undan Flykten från Träppen.</p>
+		<img src="bilder/ensammaFaret.jpg" alt="ensammaVargen" height="450" width="350">
 		<p> Om du väljer att trycka på Spela så kommer du kunna spela mitt fantastiska
 			 spel.</p>
 
