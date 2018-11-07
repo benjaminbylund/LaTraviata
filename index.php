@@ -18,17 +18,15 @@
 </nav>
 <main class="content">
 	<section>
-		<h1>Soloäventyr - Ensamma Fåret</h1>
-		<p>Välkommen till mitt text äventyr Ensamma Fåret, Undan Flykten från Träppen.</p>
-		<img src="bilder/ensammaFaret.jpg" alt="ensammaVargen" height="450" width="350">
+		<h1>Soloäventyr - LONE SHEEP </h1>
+		<p>Välkommen till mitt text äventyr Trappen, Undan Flykten från Träppen.</p>
+
+		<img src="bilder/sheep.svg" alt="ensammaVargen" height="350" width="350">
 		<p> Om du väljer att trycka på Spela så kommer du kunna spela mitt fantastiska
 			 spel.</p>
 
+
 <?php
-
-
-
-
 
 ?>
 </main>
